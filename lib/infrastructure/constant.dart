@@ -172,7 +172,7 @@ https://ww.gogoanimes.org/
     List<DownloadEpisodelist> downloadEpisodelist = [];
     List<Map<String, dynamic>> tmplinkmap = [];
     var dir = await getExternalStorageDirectory();
-    var dirloc = "${path ?? dir!.path}/AnimePrime/";
+    var dirloc = "${ dir!.path}/AnimePrime/";
     print("isgrabbed: $isgrabbed");
     tmplinkmap.add({
       "videoname": name,

@@ -248,7 +248,7 @@ class DownloaderState extends State<Downloader> with WidgetsBindingObserver {
       if (_tasks[i].isComp!) {
         // print(i.toString() +")   ----VideoDownloader-----item: " +item.toString() +"     *isComp*     " +item.taskStateString());
         _tasks[i].status = MyCommonConstants.downloadSuccess;
-        //_tasks[i].localnametask = _tasks[i].videoTaskItem.filePath;
+        _tasks[i].localnametask = _tasks[i].videoTaskItem!.filePath;
       }
       count++;
     }
@@ -825,7 +825,7 @@ class DownloaderState extends State<Downloader> with WidgetsBindingObserver {
                           gravity: toast.ToastGravity.BOTTOM);
                       // await PlayerPlugin.openWithVlcPlayer(finalstring);
                       ExternalVideoPlayerLauncher.launchVlcPlayer(
-                          finalstring.trim(), MIME.applicationXMpegURL, {
+                          finalstring, MIME.applicationXMpegURL, {
                         "title": "",
                       });
                     },
