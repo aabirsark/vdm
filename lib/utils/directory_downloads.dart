@@ -1,7 +1,7 @@
 import 'package:path_provider/path_provider.dart';
 
 Future<String> get localPath async {
-  final directory = await getApplicationDocumentsDirectory();
+  final directory = await getExternalStorageDirectory();
 
-  return directory.path;
+  return directory!.path;
 }
